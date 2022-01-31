@@ -1,0 +1,454 @@
+
+
+
+
+/** Top header start **/
+.top-header{
+    font-family: 'Roboto', sans-serif;
+    display: inline-block;
+    width: 100%;
+    background-color: #579EBE;
+    
+    
+}
+
+
+.top-header .list-inline {
+    padding: 13px 0;
+    text-align: center;
+    text-emphasis-color: #fff;
+    word-spacing: 30px;
+
+}
+
+
+.top-header ul li {
+    padding: 0 7px;
+    height: 50px;
+    display: inline-block;
+    text-align: center;
+    line-height: 44px;
+    color: #aaa;
+    font-size: 15px;
+}
+
+.top-header .list-inline a:last-child{
+    margin-right: 0;
+}
+
+.list-inline a i {
+    margin-right: 5px;
+}
+
+
+.list-inline a {
+    color: #fff;
+    margin-right: 15px;
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.top-header .sign-in, .top-header .sign-in:hover {
+    line-height: 36px;
+    color: #ececec;
+    font-size: 13px;
+    background: #2c3b6d;
+    padding: 4px 10px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+.top-header a:link {
+    text-decoration: none;
+  }
+  
+.top-header ul li a {
+    color: #fff;
+}
+
+
+.mynav{
+    background-color: #CCDCEC;
+    padding-top: 0;
+    }
+    
+.navbar .navbar-nav{
+        margin: 0 auto;
+    }
+ .nav-item{
+        margin: 1rem;
+        font-size: 1.3rem;
+    }
+    
+ .nav-item .nav-link{
+        color: #2290B4;  
+    }
+
+/** Footer **/
+footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: rgb(65, 61, 61);
+  }
+  footer .content{
+    max-width: 1350px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  footer .content p,a{
+    color: #fff;
+  }
+  footer .content .box{
+    width: 33%;
+    transition: all 0.4s ease;
+  }
+  footer .content .topic{
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 16px;
+  
+  }
+  footer .content p{
+    text-align: justify;
+  }
+  footer .content .lower .topic{
+    margin: 24px 0 5px 0;
+  }
+  footer .content .lower i{
+    padding-right: 16px;
+  }
+  footer .content .middle{
+    padding-left: 80px;
+  }
+  footer .content .middle a{
+    line-height: 32px;
+  }
+  footer .content .right input[type="text"]{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    color: #d9d9d9;
+    background: rgb(65, 61, 61);
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 17px;
+    border: 2px solid #222222;
+  }
+  footer .content .right input[type="submit"]{
+    height: 42px;
+    width: 100%;
+    font-size: 18px;
+    color: #d9d9d9;
+    background: #eb2f06;
+    outline: none;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-top: 12px;
+    border: 2px solid #eb2f06;
+    transition: all 0.3s ease-in-out;
+  }
+  .content .right input[type="submit"]:hover{
+    background: none;
+    color:  #eb2f06;
+  }
+ 
+  footer .bottom{
+    width: 100%;
+    text-align: right;
+    color: #d9d9d9;
+    padding: 0 40px 5px 0;
+  }
+  footer .bottom a{
+    color: #eb2f06;
+  }
+  footer a{
+    transition: all 0.3s ease;
+  }
+  footer a:hover{
+    color: #eb2f06;
+  }
+  @media (max-width:1100px) {
+    footer .content .middle{
+      padding-left: 50px;
+    }
+  }
+  @media (max-width:950px){
+    footer .content .box{
+      width: 50%;
+    }
+    .content .right{
+      margin-top: 40px;
+    }
+  }
+  @media (max-width:560px){
+    footer{
+      position: relative;
+    }
+    footer .content .box{
+      width: 100%;
+      margin-top: 30px;
+    }
+    footer .content .middle{
+      padding-left: 0;
+    }
+  }
+
+  /** contact section **/
+
+
+.contact-section {
+    top: 0;
+    width: 100%;
+    bottom: 0;
+    opacity: 1;
+    min-height: 100vh;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.contact-section .form-section {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #CCDCEC;
+    border-radius: 5px;
+    
+}
+
+.contact-section .form-section p{
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 15px;
+}
+
+.contact-section .form-section p a{
+    font-weight: 400;
+    color: #535353;
+}
+
+.contact-section .form-section .extra-login {
+    float: left;
+    width: 100%;
+    margin: 25px 0 25px;
+    text-align: center;
+    position: relative;
+}
+
+
+.contact-section .form-section ul{
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+.contact-section .form-section .social-list li {
+    display: inline-block;
+    margin-bottom: 5px;
+    padding: 0 8px;
+    
+
+}
+
+.contact-section .button1{
+    background-color: #2290B4;
+    border-radius: 10px;
+    
+}
+
+.contact-section .logo-2 img{
+    margin-bottom: 5px;
+    height: 90x;
+}
+
+.contact-section .form-section .social-list li a {
+    font-size: 12px;
+    font-weight: 600;
+    width: 120px;
+    margin: 2px 0 3px 0;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 3px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.contact-section .form-section .social-list li a i{
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    float: left;
+    border-radius: 3px;
+}
+
+.contact-section .form-section .social-list li a span{
+    margin-right: 7px;
+    color: #fff;
+}
+
+.contact-section .form-section .thembo{
+    margin-left: 4px;
+}
+
+.contact-section .form-section h3 {
+    margin: 0 0 25px;
+    font-size: 30px;
+    font-weight: 400;
+    color: #212121;
+    text-align: center;
+}
+
+.contact-section .form-section .form-group {
+    margin-bottom: 20px;
+    
+}
+
+.contact-section .form-section .form-box {
+    float: left;
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+}
+
+.contact-section .form-section .form-box input {
+    float: left;
+    width: 100%;
+    padding: 10px 20px 11px 50px;
+    border-radius: 5px;
+    
+}
+
+.contact-section .form-section .form-box .fa-user {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: #717171;
+    font-size: 19px;
+}
+
+.contact-section .form-section .input-text {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 15px;
+    background: transparent;
+    outline: 0;
+    color: #717171;
+    height: 50px;
+    border-radius: 3px;
+    border: 1px solid #dbdbdb;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .06);
+}
+
+.contact-section .form-section .form-box i {
+    position: absolute;
+    top: 11px;
+    left: 20px;
+    color: #717171;
+    font-size: 19px;
+}
+
+
+.contact-section .form-section .btn-md {
+    cursor: pointer;
+    padding: 14.5px 50px 13.5px 50px;
+    font-size: 15px;
+    font-weight: 400;
+    border-radius: 3px;
+}
+
+
+.contact-section .form-section button:focus {
+    outline: none;
+    outline: 0 auto -webkit-focus-ring-color;
+}
+
+.contact-section .form-section .btn-theme.focus, .btn-theme:focus {
+    box-shadow: none;
+}
+
+.contact-section .form-section .btn-theme {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border: none;
+    color: #fff;
+}
+
+.contact-section .form-section .btn-theme:hover {
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.2);
+}
+
+.contact-section .none-2{
+    display: none;
+}
+
+.contact-section .logo{
+    top: 40px;
+    position: absolute;
+    left: 65px;
+}
+
+.contact-section .form-section .terms{
+    margin-left: 3px;
+}
+
+.contact-section .form-section .checkbox {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.contact-section .form-section .form-check{
+    float: left;
+    margin-bottom: 0;
+}
+
+.contact-section .form-section .form-check a {
+    color: #616161;
+    float: right;
+}
+
+.contact-section .form-section .form-check-input {
+    position: absolute;
+    margin-left: 0;
+}
+
+
+
+.contact-section .facebook-bg {
+    background: #4867aa;
+    color: #fff;
+}
+
+.contact-section .google-bg {
+    background: #db4437;
+    color: #fff;
+}
+
+.contact-section .google-i {
+    background: #c3291c;
+}
+
+.contact-section .facebook-i {
+    background: #3b589e;
+}
+
+
+@media (max-width: 500px) {
+    .contact-section .form-section .social-list li a i {
+        display: none;
+    }
+
+    .contact-section .form-section .social-list li a {
+        width: 100px;
+    }
+}

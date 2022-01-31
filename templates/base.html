@@ -1,0 +1,144 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome/css/font-awesome.min.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'fonts/flaticon/font/flaticon.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'fonts/linearicons/style.css' %}">
+
+<body>
+  <!-- Top header start -->
+<header class="top-header th-2 top-header-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-7">
+                <div class="list-inline">
+                    <a href="tel:+55-4XX-634-7071"><i class="fa fa-phone"></i>+977-9819366048</a>
+                    <a href="tel:info@themevessel.com"><i class="fa fa-envelope"></i>info@alpinetours.com</a>
+                    <a href="tel:info@themevessel.com"><i class="fa fa-clock-o"></i>Mon-Sun:8:00am-6:00pm</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-5">
+                <ul class="top-social-media pull-right">
+                    <li>
+                        <a href="login.html" class="sign-in"><i class="fa fa-sign-in"></i> Login</a>
+                    </li>
+                    <li>
+                        <a href="signup.html" class="sign-in"><i class="fa fa-user"></i> Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Top header end -->
+
+<!-- Navigation  start -->
+
+    
+ <nav class="navbar mynav navbar-expand-lg">
+        
+    <a class="navbar-brand" href="#"><img src="img/logo.png "  alt="logo is here"></a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"><i class="fa fa-bars" aria-hidden="true"></i></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="packages.html">Packages</a>
+        </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Company profile
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">About us</a>
+              <a class="dropdown-item" href="#">Terms and Conditions</a>
+              <a class="dropdown-item" href="#">FAQ</a>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="review.html">Reviews</a>
+          </li>
+      </ul>
+     
+
+    </div>
+    
+  </nav>
+ <!--Navigation ends-->
+
+ {% block content%}
+
+ 
+
+ {% endblock %}
+
+
+
+ <!--Footer starts-->
+ <footer>
+    <div class="content">
+      <div class="left box">
+        <div class="upper">
+          <div class="topic">About us</div>
+          <p>Alpine Tours and Travels helps you to enjoy your vacation in the best manner by providing tour Pacakages in minimal cost.</p>
+        </div>
+        <div class="lower">
+          <div class="topic">Contact us</div>
+          <div class="phone">
+            <a href="tel:+977-9819366048"><i class="fa fa-phone"></i>+977-9819366048</a>
+          </div>
+          <div class="email">
+            <a href="tel:info@themevessel.com"><i class="fa fa-envelope"></i>info@alpinetours.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="middle box">
+        <div class="topic">Quick links</div>
+        <div><a href="index.html">Home</a></div>
+        <div><a href="package.html">Packages</a></div>
+        <div><a href="gallery.html">Gallery</a></div>
+        <div><a href="review.html">Reviews</a></div>
+        <div><a href="terms.html">Terms and Conditions</a></div>
+        <div><a href="FAQ.html">FAQ</a></div>
+      </div>
+      <div class="right box">
+        <div class="topic">Subscribe us</div>
+        <form action="#">
+          <input type="text" placeholder="Enter email address">
+          <input type="submit" name="" value="Send">
+        </form>
+      </div>
+    </div>
+    <div class="bottom">
+      <p>Copyright © 2020 <a href="#">CodingLab</a> All rights reserved</p>
+    </div>
+  </footer>
+
+<!-- Footer ends-->
+   
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+
+</body>
+
+</html>
