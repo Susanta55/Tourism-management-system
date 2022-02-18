@@ -67,6 +67,12 @@
     color: #fff;
 }
 
+@media screen and (max-width: 1000px) {
+    .top-header {
+        display: none;
+    }
+}
+
 
 .mynav{
     background-color: #CCDCEC;
@@ -88,7 +94,7 @@
 /** Footer **/
 footer{
     width: 100%;
-    position: fixed;
+
     bottom: 0;
     left: 0;
     background: rgb(65, 61, 61);
@@ -115,6 +121,7 @@ footer{
     margin-bottom: 16px;
   
   }
+  
   footer .content p{
     text-align: justify;
   }
@@ -124,11 +131,26 @@ footer{
   footer .content .lower i{
     padding-right: 16px;
   }
+
+  footer .content .lower a{
+    text-decoration: none;
+    color: #fff;
+  }
+
+  footer .lower a:hover{
+    color: #eb2f06;
+  }
   footer .content .middle{
     padding-left: 80px;
   }
   footer .content .middle a{
     line-height: 32px;
+    text-decoration: none;
+    color: #fff;
+  }
+
+  footer .middle a:hover{
+    color: #eb2f06;
   }
   footer .content .right input[type="text"]{
     height: 45px;
@@ -146,7 +168,7 @@ footer{
     width: 100%;
     font-size: 18px;
     color: #d9d9d9;
-    background: #eb2f06;
+    background: #24A0ED;
     outline: none;
     border-radius: 5px;
     letter-spacing: 1px;
@@ -238,28 +260,7 @@ footer{
     color: #535353;
 }
 
-.contact-section .form-section .extra-login {
-    float: left;
-    width: 100%;
-    margin: 25px 0 25px;
-    text-align: center;
-    position: relative;
-}
 
-
-.contact-section .form-section ul{
-    list-style: none;
-    padding: 0;
-    margin: 0 0 20px;
-}
-
-.contact-section .form-section .social-list li {
-    display: inline-block;
-    margin-bottom: 5px;
-    padding: 0 8px;
-    
-
-}
 
 .contact-section .button1{
     background-color: #2290B4;
@@ -272,31 +273,11 @@ footer{
     height: 90x;
 }
 
-.contact-section .form-section .social-list li a {
-    font-size: 12px;
-    font-weight: 600;
-    width: 120px;
-    margin: 2px 0 3px 0;
-    height: 35px;
-    line-height: 35px;
-    border-radius: 3px;
-    display: inline-block;
-    text-align: center;
-    text-decoration: none;
+.contact-section .down{
+    padding-top: 20px;
+    font-size: 1.6rem;
 }
 
-.contact-section .form-section .social-list li a i{
-    height: 35px;
-    width: 35px;
-    line-height: 35px;
-    float: left;
-    border-radius: 3px;
-}
-
-.contact-section .form-section .social-list li a span{
-    margin-right: 7px;
-    color: #fff;
-}
 
 .contact-section .form-section .thembo{
     margin-left: 4px;
@@ -424,31 +405,179 @@ footer{
 
 
 
-.contact-section .facebook-bg {
-    background: #4867aa;
-    color: #fff;
+/** banner start **/
+
+.carousel-item img {
+    height: 550px;
+    width: 850px;
+} 
+
+.carousel-item p{
+    font-size: 1.2rem;
+}
+.carousel-item h2{
+    color: #ffa500;
 }
 
-.contact-section .google-bg {
-    background: #db4437;
-    color: #fff;
+.carousel-item .btn{
+    margin-bottom: 20px;  
 }
 
-.contact-section .google-i {
-    background: #c3291c;
+.carousel-item .btn-info:hover{
+    color: #eb2f06;
+
 }
 
-.contact-section .facebook-i {
-    background: #3b589e;
+/** search box **/
+
+
+.search-box-4{
+    position: absolute;
+    padding: 40px 50px 0px 0px;
+    max-width: 350px!important;
+    width: 100%;
+    top: 15%;
+    right: 5%;
+    z-index: 1;
+    background: #86B8D5;
+    border-radius: 10px;
+    
 }
 
+.search-box-4 .search-fields {
+    min-height: 40px;
+    margin: 20px;
+    border-radius: 3px;
+    box-shadow: none;
+    border: 1px solid #fff;
+    background: #CCDCEC;
+}
 
-@media (max-width: 500px) {
-    .contact-section .form-section .social-list li a i {
+.search-box-4  .btn-sm {
+    padding: 12px 30px 12px 30px;
+    background-color:#24A0ED;
+    margin-left: 20px;
+    border-radius: 3px;
+}
+
+.search-box-4  .btn-sm:hover{
+    background-color:#ffa500 ;
+}
+
+@media screen and (max-width: 900px) {
+    .search-box-4 {
         display: none;
     }
-
-    .contact-section .form-section .social-list li a {
-        width: 100px;
-    }
 }
+
+/** featured section **/
+
+
+.main-title {
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.main-title h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 5rem;
+}
+
+.main-title span{
+    color: #2290B4;
+}
+
+
+.packages .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.packages .box-container .box{
+    flex: 1 1 30rem;
+    border-radius: .5rem;
+    overflow: hidden;
+    box-shadow: 0;
+}
+
+.packages .box-container .box img{
+    height: 20rem;
+    width: 80%;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.packages .box-container .box .content{
+    padding: 1.5rem;
+
+}
+
+.packages .box-container .box .content h3{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.packages .box-container .box .content p {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.packages .box-container .box .content .price{
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.packages .box-container .box .content .mybtn1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.5rem;
+}
+
+.packages .box-container .box .content .mybtn1 .btn-info:hover{
+    color: #ffa500 ;
+}
+
+/** Services section **/
+
+.card{
+    border: none;
+    outline: none;
+    -webkit-box-shadow: -8px 6px 89px -65px rgba(0,0,0,0.75);
+     -moz-box-shadow: -8px 6px 89px -65px rgba(0,0,0,0.75);
+    box-shadow: -8px 6px 89px -65px rgba(0,0,0,0.75);
+}
+
+.card p{
+    color: gray;
+    font-size: 1.1rem;
+}
+
+.card h4{
+    color: #3c84c1;
+}
+
+.circle{
+    height: 70px;
+    width: 70px;
+    background-color: lightgray;
+    color: black;
+    padding: 12px;
+    display: inline-block;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    font-size: 30px;
+}
+
+.card:hover .circle{
+    background-color: #3c84c1;
+    color: #fff;
+    transition: 0.5s;
+}
+
+
+/** packages start **/

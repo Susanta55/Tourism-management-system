@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'packages.apps.PackagesConfig',
+    'pages.apps.PagesConfig',
     'accounts.apps.AccountsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -76,8 +78,12 @@ WSGI_APPLICATION = 'tourism.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'tourism_db',
+        'USER': 'postgres',
+        'PASSWORD': 'cisco123',
+        'Host': 'localhost',
+        'PORT': '5000',
     }
 }
 
@@ -127,3 +133,24 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#messages
+
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger',
+    
+}
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS =True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'susanvuzeldon@gmail.com'
+EMAIL_HOST_PASSWORD ='prem12345'
+
+AUTH_USER_MODEL = 'accounts.User'
+
+
+
