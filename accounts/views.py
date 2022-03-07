@@ -1,6 +1,6 @@
 from .utils import generate_token
 from django.shortcuts import render, redirect
-from django.contrib import messages
+from django.contrib import messages,auth
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
 from validate_email import validate_email
@@ -29,7 +29,7 @@ def login_user(request):
 
         user=authenticate(request, username=username,password=password)
         
-        if not user.is_email_verified:
+        if  not user.is_email_verified:
             messages.add_message(request,messages.ERROR,
                                                     'Email is not verified, verify it to login')
             return redirect('login')                                       
@@ -117,6 +117,7 @@ def register(request):
  
 
 def logout(request):
+    auth.logout(request)
     return redirect('home')
 
 

@@ -30,12 +30,20 @@
         </div>
         <div class="col-lg-4 col-md-4 col-sm-5">
           <ul class="top-social-media pull-right">
+
+            {% if user.is_authenticated %}
+            <li style="color: #fff; font-size: 18px; margin-top: 7px;"> Welcome, {{user.username}}</li>
+            <li> <a href="{% url 'logout' %}" class="sign-in"><i class="fa fa-sign-in"></i> Logout</a></li>
+
+            {% else %}
+           
             <li>
               <a href="{% url 'login' %}" class="sign-in"><i class="fa fa-sign-in"></i> Login</a>
             </li>
             <li>
               <a href="{% url 'register' %}" class="sign-in"><i class="fa fa-user"></i> Register</a>
             </li>
+            {% endif %}
           </ul>
         </div>
       </div>
@@ -63,6 +71,7 @@
         <li class="nav-item">
           <a class="nav-link" href="{% url 'packages'%}">Packages</a>
         </li>
+
 
         <li class="nav-item">
           <a class="nav-link" href="review.html">Reviews</a>
@@ -133,7 +142,7 @@
     </div>
   </div>
   <div class="bottom">
-    <p>Copyright © 2020 <a href="#">Alpinetours</a> All rights reserved</p>
+    <p>Copyright © 2020. All rights reserved</p>
   </div>
 </footer>
 

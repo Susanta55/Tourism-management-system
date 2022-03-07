@@ -260,7 +260,25 @@ footer{
     color: #535353;
 }
 
+.contact-section .form-section .extra-login {
+    float: left;
+    width: 100%;
+    margin: 25px 0 25px;
+    text-align: center;
+    position: relative;
+}
 
+
+.contact-section .form-section ul{
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+.contact-section .down{
+    padding-top: 20px;
+    font-size: 1.6rem;
+}
 
 .contact-section .button1{
     background-color: #2290B4;
@@ -273,10 +291,6 @@ footer{
     height: 90x;
 }
 
-.contact-section .down{
-    padding-top: 20px;
-    font-size: 1.6rem;
-}
 
 
 .contact-section .form-section .thembo{
@@ -405,6 +419,8 @@ footer{
 
 
 
+
+
 /** banner start **/
 
 .carousel-item img {
@@ -436,7 +452,7 @@ footer{
     padding: 40px 50px 0px 0px;
     max-width: 350px!important;
     width: 100%;
-    top: 15%;
+    top: 10%;
     right: 5%;
     z-index: 1;
     background: #86B8D5;
@@ -474,72 +490,29 @@ footer{
 
 
 .main-title {
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
     text-align: center;
 }
 
 .main-title h1 {
     font-size: 3rem;
     font-weight: 700;
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 
 .main-title span{
     color: #2290B4;
 }
 
-
-.packages .box-container{
-    display: flex;
-    flex-wrap: wrap;
-    
-}
-
-.packages .box-container .box{
-    flex: 1 1 30rem;
-    border-radius: .5rem;
-    overflow: hidden;
-    box-shadow: 0;
-}
-
-.packages .box-container .box img{
-    height: 20rem;
-    width: 80%;
-    object-fit: cover;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.packages .box-container .box .content{
-    padding: 1.5rem;
-
-}
-
-.packages .box-container .box .content h3{
-    font-size: 2rem;
-    text-align: center;
-}
-
-.packages .box-container .box .content p {
-    font-size: 1rem;
-    text-align: center;
-}
-
-.packages .box-container .box .content .price{
-    font-size: 1.5em;
-    text-align: center;
-}
-
-.packages .box-container .box .content .mybtn1{
+.mybtn1{
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 0.5rem;
 }
 
-.packages .box-container .box .content .mybtn1 .btn-info:hover{
-    color: #ffa500 ;
+.mybtn1 .btn-info:hover{
+    color: #ad863e ;
 }
 
 /** Services section **/
@@ -579,5 +552,156 @@ footer{
     transition: 0.5s;
 }
 
-
 /** packages start **/
+
+.packages-3 {
+    position: relative;
+    margin: 50px 0;
+    background: #fff;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    height: 500px;
+    width: 100%;
+}
+
+.packages-3:hover{
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.packages-3 .detail {
+    padding: 25px 20px;
+}
+
+.packages-3 .custom-list {
+    margin-bottom: 15px;
+}
+
+.packages-3 .custom-list li {
+    font-size: 11px;
+    display: inline-block;
+    padding-right: 5px;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+
+.packages-3 .custom-list li a{
+    color: #535353;
+}
+
+.packages-3 .detail .title {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.packages-3 .detail .title a:link {
+    text-decoration: none;
+  }
+
+.packages-3 .detail .title a{
+    color: #212121;
+}
+
+.packages-3 .detail .title a:hover {
+    color: #3c84c1;
+}
+
+.packages-3 .detail .location{
+    margin-bottom: 15px;
+}
+.packages-3 .detail .location a{
+    font-size: 14px;
+}
+
+
+.packages-3 .facilities-list li {
+    list-style: none;
+    float: left;
+    margin: 0px 3px 6px 6px;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 3px 10px;
+    border: solid 1px #e2e0e0;
+    border-radius: 3px;
+}
+
+.packages-3 .facilities-list li i{
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.packages-3 .mybtn1{
+    padding: 0;
+}
+
+.package-img{
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .3s ease;
+  backface-visibility: hidden;
+}
+
+.packages-3:hover .package-img{
+    opacity: 0.3;
+}
+
+
+
+/** Paginatin box **/
+.pagination-box {
+    margin-bottom: 25px;
+}
+
+.pagination {
+    padding-left: 0;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.pagination li {
+    display: inline-block;
+}
+
+.pagination > li > a {
+    color: #4d4d4d;
+    font-size: 18px;
+    background: #fff;
+    font-weight: 400;
+}
+
+.pagination > li > a i{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.pagination .page-item:first-child .page-link {
+    border-radius: 0;
+}
+
+.pagination .page-item:last-child .page-link {
+    border-radius: 0;
+}
+
+.pagination > li > a:hover {
+    color: #fff;
+}
+
+.pagination > li > .active {
+    color: #000;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.page-link:focus {
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+      

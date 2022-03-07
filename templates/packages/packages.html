@@ -9,140 +9,154 @@
 
 <!-- Featured car start -->
 <div class="featured-car content-area">
-    <div class="container">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-12">
+
         <div class="row">
-            <div class="col-lg-8 col-md-12">
-                
-                <div class="row">
 
-                    <div class="col-lg-6 col-md-6">
-                        <div class="packages-3">
-                            <div class="thumbnail">
-                                <a href="#" class="package-img">                                                            
-                                    <img class="d-block w-100 " src="{% static 'img/spic.jpg' %}" alt="kathmandu">
-                                </a>
-                            </div>
-                            <div class="detail">
-                                <h1 class="title">
-                                    <a href="#">Kathmandu Valley Tour</a>
-                                </h1>
-                                <ul class="facilities-list clearfix">
-                                    <li><i class="fa fa-money"></i> Rs 10000</li>
-                                    <li><i class="fa fa-car"></i> Transport included</li>
-                                    <li><i class="fa fa-clock-o"></i> 4D/3N</li>
-                                    <li><i class="fa fa-location-arrow"></i> Kathmandu</li>
-                                    <li><i class="fa fa-globe"></i> Sight seeing</li>
-                                    <li>A wonderful trip to visit monasteries and temples of ktm valley</li>
-                                </ul>
-  
-                                <div class="mybtn1">
-                                  <button type="button" class="btn btn-info ">Book Now</button>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
+          {% for package in main_packages %}
+          
 
+          <div class="col-lg-6 col-md-6">
+            <div class="packages-3">
+              <div class="thumbnail">
+                <a href="#" class="package-img">
+                  <img class="d-block w-100 " src="{{ package.package_img.url }}" alt="no image displayed" style="min-height:263px; max-height:263px;">
+                </a>                  
+              </div>
+              <div class="detail">
+                <h1 class="title">
+                  <a href="{% url 'package_detail' package.id %}">{{ package.destination}}</a>
+                </h1>
+                <ul class="facilities-list clearfix">
+                  <li><i class="fa fa-money"></i> Rs{{ package.price}}</li>
+                  <li><i class="fa fa-clock-o"></i> {{ package.duration}} days</li>
+                  <li><i class="fa fa-location-arrow"></i> {{ package.location}}</li>
+                  <li><i class="fa fa-globe"></i> {{ package.activities}}</li>
+                </ul>
 
-                    <div class="col-lg-6 col-md-6">
-                        <div class="packages-3">
-                            <div class="thumbnail">
-                                <a href="#" class="package-img">                                                            
-                                    <img class="d-block w-100 " src="{% static 'img/Apic.jpg' %}" alt="kathmandu">
-                                </a>
-                            </div>
-                            <div class="detail">
-                                <h1 class="title">
-                                    <a href="#">Annapurna Base Camp</a>
-                                </h1>
-                                <ul class="facilities-list clearfix">
-                                    <li><i class="fa fa-money"></i> Rs 10000</li>
-                                    <li><i class="fa fa-car"></i> Transport included</li>
-                                    <li><i class="fa fa-clock-o"></i> 4D/3N</li>
-                                    <li><i class="fa fa-location-arrow"></i> Annapurna</li>
-                                    <li><i class="fa fa-globe"></i> Mountaineering</li>
-                                    <li>A wonderful trip to visit monasteries and temples of ktm valley</li>
-                                </ul>
-  
-                                <div class="mybtn1">
-                                  <button type="button" class="btn btn-info ">Book Now</button>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-
-
+                <div class="mybtn1">
+                  <button type="button" class="btn btn-info ">Book Now</button>
                 </div>
-                
-                
+              </div>
+
             </div>
-            <div class="col-lg-4 col-md-12">
-              <div class="search-box-4">
-                <form action="#" method="">
-            
-                  <div class="form-group">
-                    <select class="form-control search-fields" name="select-brand">
-                      <option selected="true" disabled="disabled">Destination</option>
-                      <option>Kathmandu</option>
-                      <option>Rara</option>
-                      <option>Illam</option>
-                      <option>Annapurna</option>
-                      <option>Mardi himal</option>
-            
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <select class="form-control search-fields" name="select-make">
-                      <option selected="true" disabled="disabled">Duration</option>
-                      <option>1-2 days</option>
-                      <option>3-4 days</option>
-                      <option>5-10 days</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <select class="form-control search-fields" name="select-location">
-                      <option selected="true" disabled="disabled">Activities</option>
-                      <option>Tour</option>
-                      <option>Trekking</option>
-                      <option>Sight seeing</option>
-                      <option>Mountaineering</option>
-            
-            
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <select class="form-control search-fields" name="select-location">
-                      <option selected="true" disabled="disabled">Price</option>
-                      <option>Rs5000</option>
-                      <option>Rs10000</option>
-                      <option>Rs15000</option>
-                      <option>Rs20000</option>
-                      <option>Rs30000</option>
-                      <option>Rs40000</option>
-            
-            
-            
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <button class="btn btn-block button-info btn-sm">
-                      <i class="fa fa-search"></i> Search
-                    </button>
-                  </div>
-              </div>
-            
-            
-              </form>
-              </div>
-            
-            
-            
+          </div>
+
+           {% endfor%}
+
+
+        </div>
+
+
+        <div class="pagination-box p-box-2 text-center">
+          <nav aria-label="Page navigation example">
+            {% if main_packages.has_other_pages  %}
+            <ul class="pagination ">
+              {% if main_packages.has_previous %}
+              <li class="page-item">
+                <a class="page-link" href="?page={{main_packages.previous_page_number}}"><i class="fa fa-angle-left"></i></a>
+              </li>
+
+              {% else %}
+              <li class="page-item disabled">
+                <a class="page-link"><i class="fa fa-angle-left"></i></a>
+              </li>
+
+              {% endif %}
+
+              {% for i in main_packages.paginator.page_range %}
+                  {% if main_packages.number == i %}
+              <li class="page-item"><a class="page-link active" href="#">{{i}}</a></li>
+                   {% else %}
+                   <li class="page-item"><a class="page-link" href="?page={{i}}">{{i}}</a></li>    
+                   {% endif%}
+              {% endfor %}
+
+              {% if main_packages.has_next %}
+              <li class="page-item">
+                <a class="page-link" href="?page={{main_packages.next_page_number}}"><i class="fa fa-angle-right"></i></a>
+              </li>
+
+              {% else %}
+              <li class="page-item disabled">
+                <a class="page-link"><i class="fa fa-angle-right"></i></a>
+              </li>
+
+              {% endif %}
+
+            {% endif%}
+          </nav>
+        </div>
+      </div>
+
+
+      <div class="col-lg-4 col-md-12">
+        <div class="search-box-4">
+          <form action="#" method="">
+
+            <div class="form-group">
+              <select class="form-control search-fields" name="select-brand">
+                <option selected="true" disabled="disabled">Destination</option>
+                <option>Kathmandu</option>
+                <option>Rara</option>
+                <option>Illam</option>
+                <option>Annapurna</option>
+                <option>Mardi himal</option>
+
+              </select>
+            </div>
+            <div class="form-group">
+              <select class="form-control search-fields" name="select-make">
+                <option selected="true" disabled="disabled">Duration</option>
+                <option>1-2 days</option>
+                <option>3-4 days</option>
+                <option>5-10 days</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <select class="form-control search-fields" name="select-location">
+                <option selected="true" disabled="disabled">Activities</option>
+                <option>Tour</option>
+                <option>Trekking</option>
+                <option>Sight seeing</option>
+                <option>Mountaineering</option>
+
+
+              </select>
+            </div>
+            <div class="form-group">
+              <select class="form-control search-fields" name="select-location">
+                <option selected="true" disabled="disabled">Price</option>
+                <option>Rs5000</option>
+                <option>Rs10000</option>
+                <option>Rs15000</option>
+                <option>Rs20000</option>
+                <option>Rs30000</option>
+                <option>Rs40000</option>
+
+
+
+              </select>
+            </div>
+            <div class="form-group">
+              <button class="btn btn-block button-info btn-sm">
+                <i class="fa fa-search"></i> Search
+              </button>
             </div>
         </div>
+
+
+        </form>
+      </div>
+
+
+
     </div>
   </div>
-  
+</div>
+</div>
 
 
 
@@ -150,6 +164,7 @@
 
 
 
-  <!--Featured end-->
+
+<!--Featured end-->
 
 {% endblock %}

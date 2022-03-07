@@ -490,61 +490,18 @@ footer{
 
 
 .main-title {
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
     text-align: center;
 }
 
 .main-title h1 {
     font-size: 3rem;
     font-weight: 700;
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 
 .main-title span{
     color: #2290B4;
-}
-
-
-.packages .box-container{
-    display: flex;
-    flex-wrap: wrap;
-    
-}
-
-.packages .box-container .box{
-    flex: 1 1 30rem;
-    border-radius: .5rem;
-    overflow: hidden;
-    box-shadow: 0;
-}
-
-.packages .box-container .box img{
-    height: 20rem;
-    width: 80%;
-    object-fit: cover;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.packages .box-container .box .content{
-    padding: 1.5rem;
-
-}
-
-.packages .box-container .box .content h3{
-    font-size: 2rem;
-    text-align: center;
-}
-
-.packages .box-container .box .content p {
-    font-size: 1rem;
-    text-align: center;
-}
-
-.packages .box-container .box .content .price{
-    font-size: 1.5em;
-    text-align: center;
 }
 
 .mybtn1{
@@ -558,6 +515,28 @@ footer{
     color: #ad863e ;
 }
 
+.top-left {
+    float: left;
+    position: absolute;
+    transform: rotate(-45deg);
+    left: -60px;
+    top: 30px;
+    text-align: center;
+    width: 200px;
+    font-size: 12px;
+    margin: 0;
+    color: #fff;
+    font-weight: 500;
+    line-height: 28px;
+    background: #292929;
+    text-transform: uppercase;
+  }
+
+.thumbnail{
+    position: relative;
+   text-align: center;
+    color: white;
+}
 /** Services section **/
 
 .card{
@@ -603,8 +582,6 @@ footer{
     background: #fff;
     box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    height: 570px;
-    width: 100%;
 }
 
 .packages-3:hover{
@@ -679,8 +656,118 @@ footer{
     padding: 0;
 }
 
+.package-img{
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .3s ease;
+  backface-visibility: hidden;
+}
+
+.packages-3:hover .package-img{
+    opacity: 0.3;
+}
 
 
 
 
-      
+/** Paginatin box **/
+.pagination-box {
+    margin-bottom: 25px;
+}
+
+.pagination {
+    padding-left: 0;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.pagination li {
+    display: inline-block;
+}
+
+.pagination > li > a {
+    color: #4d4d4d;
+    font-size: 18px;
+    background: #fff;
+    font-weight: 400;
+}
+
+.pagination > li > a i{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.pagination .page-item:first-child .page-link {
+    border-radius: 0;
+}
+
+.pagination .page-item:last-child .page-link {
+    border-radius: 0;
+}
+
+.pagination > li > a:hover {
+    color: #fff;
+}
+
+.pagination > li > .active {
+    color: #000;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.page-link:focus {
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+
+/** packages detail **/
+
+.heading-package{
+    margin-top: 2.3rem;
+}
+
+.one_img{
+   margin-top: 20px;
+   margin-bottom: 30px;
+   width: 850px;
+
+}
+
+.one_img img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.heading-2 {
+    margin: 0 0 25px;
+    margin-top: 20px;
+    font-size: 32px;
+    font-weight: 400;
+    color: #212121;
+}
+
+.trip{
+    list-style-type: none;
+    
+}
+
+.package-description, .tab_border{
+
+    border: 1px solid #dedede;
+    padding: 30px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+    margin-bottom: 2rem;
+    
+
+}
+
+.package-description p{
+    font-size: 1.1rem;
+}
+
+.pac_price{
+
+    font-family:cursive;
+    color: #292929;
+}
