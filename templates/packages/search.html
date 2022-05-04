@@ -1,0 +1,63 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+{% load static %}
+
+
+
+<div class="main-title">
+    <h1>Here are the searched <span>Packages </span></h1>
+
+  </div>
+<!-- Featured packages start -->
+<div class="featured-car content-area">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+  
+          <div class="row">
+  
+            {% for package in packages %}
+            
+  
+            <div class="col-lg-4 col-md-4">
+              <div class="packages-3">
+                <div class="thumbnail">
+                  <a href="{% url 'package_detail' package.slug %}" class="package-img">
+                    <img class="d-block w-100 " src="{{ package.package_img.url }}" alt="no image displayed" style="min-height:263px; max-height:263px;">
+                  </a>                  
+                </div>
+                <div class="detail">
+                  <h1 class="title">
+                    <a href="{% url 'package_detail' package.slug %}">{{ package.destination}}</a>
+                  </h1>
+                  <ul class="facilities-list clearfix">
+                    <li><i class="fa fa-money"></i> $ {{ package.price}}</li>
+                    <li><i class="fa fa-clock-o"></i> {{ package.duration}} days</li>
+                    <li><i class="fa fa-location-arrow"></i> {{ package.location}}</li>
+                    <li><i class="fa fa-globe"></i> {{ package.activities}}</li>
+                  </ul>
+  
+                  <div class="mybtn1">
+                    <a href="{% url 'package_detail' package.slug %}">
+                    <button type="button" class="btn btn-info">Explore Now</button>
+                    </a>
+                  </div>
+                </div>
+  
+              </div>
+            </div>
+  
+             {% endfor%}
+  
+  
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          
+  
+
+{% endblock %}

@@ -7,7 +7,7 @@
 
 
 
-<!-- Featured car start -->
+<!-- Featured packages start -->
 <div class="featured-car content-area">
   <div class="container">
     <div class="row">
@@ -21,23 +21,25 @@
           <div class="col-lg-6 col-md-6">
             <div class="packages-3">
               <div class="thumbnail">
-                <a href="#" class="package-img">
+                <a href="{% url 'package_detail' package.slug %}" class="package-img">
                   <img class="d-block w-100 " src="{{ package.package_img.url }}" alt="no image displayed" style="min-height:263px; max-height:263px;">
                 </a>                  
               </div>
               <div class="detail">
                 <h1 class="title">
-                  <a href="{% url 'package_detail' package.id %}">{{ package.destination}}</a>
+                  <a href="{% url 'package_detail' package.slug %}">{{ package.destination}}</a>
                 </h1>
                 <ul class="facilities-list clearfix">
-                  <li><i class="fa fa-money"></i> Rs{{ package.price}}</li>
+                  <li><i class="fa fa-money"></i> $ {{ package.price}}</li>
                   <li><i class="fa fa-clock-o"></i> {{ package.duration}} days</li>
                   <li><i class="fa fa-location-arrow"></i> {{ package.location}}</li>
                   <li><i class="fa fa-globe"></i> {{ package.activities}}</li>
                 </ul>
 
                 <div class="mybtn1">
-                  <button type="button" class="btn btn-info ">Book Now</button>
+                  <a href="{% url 'package_detail' package.slug %}">
+                  <button type="button" class="btn btn-info">Explore Now</button>
+                  </a>
                 </div>
               </div>
 
@@ -94,56 +96,56 @@
 
       <div class="col-lg-4 col-md-12">
         <div class="search-box-4">
-          <form action="#" method="">
+          <form action="{% url 'search' %}" method="get">
 
             <div class="form-group">
-              <select class="form-control search-fields" name="select-brand">
+              <select class="form-control search-fields" name="location">
+                <option selected="true" disabled="disabled">Location</option>
+                {% for location in loc_search%}
+                <option value="{{location}}">{{location}}</option>
+
+                {%endfor%}
+
+              </select>
+            </div>
+            <div class="form-group">
+              <select class="form-control search-fields" name="destination">
                 <option selected="true" disabled="disabled">Destination</option>
-                <option>Kathmandu</option>
-                <option>Rara</option>
-                <option>Illam</option>
-                <option>Annapurna</option>
-                <option>Mardi himal</option>
+                {% for destination in dest_search%}
+                <option value="{{destination}}">{{destination}}</option>
 
+                {%endfor%}
               </select>
             </div>
             <div class="form-group">
-              <select class="form-control search-fields" name="select-make">
-                <option selected="true" disabled="disabled">Duration</option>
-                <option>1-2 days</option>
-                <option>3-4 days</option>
-                <option>5-10 days</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <select class="form-control search-fields" name="select-location">
+              <select class="form-control search-fields" name="activities">
                 <option selected="true" disabled="disabled">Activities</option>
-                <option>Tour</option>
-                <option>Trekking</option>
-                <option>Sight seeing</option>
-                <option>Mountaineering</option>
+                {% for activities in acti_search%}
+                <option value="{{activities}}">{{activities}}</option>
+
+                {%endfor%}
 
 
               </select>
             </div>
             <div class="form-group">
-              <select class="form-control search-fields" name="select-location">
+              <select class="form-control search-fields" name="price">
                 <option selected="true" disabled="disabled">Price</option>
-                <option>Rs5000</option>
-                <option>Rs10000</option>
-                <option>Rs15000</option>
-                <option>Rs20000</option>
-                <option>Rs30000</option>
-                <option>Rs40000</option>
+                {% for price in price_search%}
+                <option value="{{price}}">$ {{price}}</option>
+
+                {%endfor%}
 
 
 
               </select>
             </div>
             <div class="form-group">
-              <button class="btn btn-block button-info btn-sm">
+              
+              <button class="btn btn-block button-info btn-sm" type="submit">
                 <i class="fa fa-search"></i> Search
               </button>
+        
             </div>
         </div>
 

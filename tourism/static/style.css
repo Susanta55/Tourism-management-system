@@ -91,6 +91,26 @@
         color: #2290B4;  
     }
 
+.navbar form{
+    margin-left: 100px;
+}
+
+.navbar .form-control{
+    width:300px;
+}
+
+.navbar .btn{
+    border-radius: 5px;
+    width: 100px;
+    background-color: #8ccbe0;
+    
+}
+
+.navbar .btn:hover{
+    color: #fff;
+}
+
+
 /** Footer **/
 footer{
     width: 100%;
@@ -151,35 +171,6 @@ footer{
 
   footer .middle a:hover{
     color: #eb2f06;
-  }
-  footer .content .right input[type="text"]{
-    height: 45px;
-    width: 100%;
-    outline: none;
-    color: #d9d9d9;
-    background: rgb(65, 61, 61);
-    border-radius: 5px;
-    padding-left: 10px;
-    font-size: 17px;
-    border: 2px solid #222222;
-  }
-  footer .content .right input[type="submit"]{
-    height: 42px;
-    width: 100%;
-    font-size: 18px;
-    color: #d9d9d9;
-    background: #24A0ED;
-    outline: none;
-    border-radius: 5px;
-    letter-spacing: 1px;
-    cursor: pointer;
-    margin-top: 12px;
-    border: 2px solid #eb2f06;
-    transition: all 0.3s ease-in-out;
-  }
-  .content .right input[type="submit"]:hover{
-    background: none;
-    color:  #eb2f06;
   }
  
   footer .bottom{
@@ -428,6 +419,12 @@ footer{
     width: 850px;
 } 
 
+ 
+ .carousel-item img{
+     width: 100%;
+     object-fit: cover;
+ }
+
 .carousel-item p{
     font-size: 1.2rem;
 }
@@ -442,7 +439,7 @@ footer{
 .carousel-item .btn-info:hover{
     color: #eb2f06;
 
-}
+}  
 
 /** search box **/
 
@@ -730,7 +727,7 @@ footer{
 .one_img{
    margin-top: 20px;
    margin-bottom: 30px;
-   width: 850px;
+   width: 1180px;
 
 }
 
@@ -770,4 +767,286 @@ footer{
 
     font-family:cursive;
     color: #292929;
+}
+
+.mybtn2{
+    margin: 10px 0 20px 120px;
+}
+
+.mybtn2 .btn-md {
+    cursor: pointer;
+    padding: 14.5px 50px 13.5px 50px;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 3px;
+}
+
+
+.mybtn2 .btn-info {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border: none;
+    color: #fff;
+}
+
+ .mybtn2 .btn-info:hover {
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.2);
+    color: #ad863e ;
+}
+
+
+/** booking form page **/
+
+.personal-detail-box{
+    border: 1px solid #dedede;
+    padding: 30px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+    margin-bottom: 2rem;
+   
+    
+}
+
+.trip-detail-box{
+    border: 1px solid #dedede;
+    padding: 30px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+    margin-bottom: 2rem;
+    
+}
+
+.book_form label{
+  
+  font-weight: bold;
+}
+
+.book_form .book_heading{
+    margin-bottom: 30px;
+    color: #2290B4;
+    
+}
+
+.main_heading{
+   text-align: center;
+   padding: 20px 0 0 0;
+   color: #2290B4;
+}
+
+.form-group button{
+    color: #fff;
+}
+.form-group button:hover{
+    color: #ad863e ;
+}
+
+
+/** page not found **/
+
+.pcontainer{
+  font-family: 'Arvo', serif;
+  background: #ebeef1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+  transition: 1s;
+}
+
+.error {
+    color: #1f2125;
+    box-shadow: 0 5px 0px -2px #20293F;
+    text-align: center;
+    animation: fadein 1.2s ease-in;
+  }
+  .error > .code {
+    font-size: 10.5em;
+    text-shadow:  0 6px 1px rgba(0,0,0,0.0980392) , 0 0 5px rgba(0,0,0,0.0980392) , 0 1px 3px rgba(0,0,0,0.298039) , 0 3px 5px rgba(0,0,0,0.2) , 0 5px 10px rgba(0,0,0,0.247059) , 0 10px 10px rgba(0,0,0,0.2) , 0 20px 20px rgba(0,0,0,0.14902) ;
+    margin: 0;
+  }
+  .error > .desc {
+    text-shadow: 0px 3px 5px rgba(0,0,0,0.5), 0px 6px 20px rgba(0,0,0,0.3);
+    font-weight: 400;
+  }
+  @keyframes fadein {
+    0% {
+      margin-top: -50px;
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /** about page **/
+
+.Asection{
+	width: 100%;
+	min-height: 100vh;
+    color: rgb(17, 15, 15);
+	
+}
+.Acontainer{
+	width: 80%;
+	display: block;
+	margin:auto;
+	padding-top: 100px;
+}
+.content-section{
+	float: left;
+	width: 55%;
+}
+.image-section{
+	float: right;
+	width: 40%;
+    margin-top: 25px;
+}
+.image-section img{
+	width: 100%;
+	height: auto;
+}
+.content-section .title{
+	text-transform: uppercase;
+	font-size: 28px;
+    margin-bottom: 30px;
+    text-align: center;
+    margin-top: -55px;
+}
+
+.content-section .content p{
+	margin-top: 10px;
+	font-size: 17px;
+	line-height: 1.5;
+    
+}
+
+@media screen and (max-width: 768px){
+	.Acontainer{
+	width: 80%;
+	display: block;
+	margin:auto;
+	padding-top:50px;
+}
+.content-section{
+	float:none;
+	width:100%;
+	display: block;
+	margin:auto;
+}
+.image-section{
+	float:none;
+	width:100%;
+	
+}
+.image-section img{
+	width: 100%;
+	height: auto;
+	display: block;
+	margin:auto;
+    margin-bottom: 30px;
+}
+.content-section .title{
+	text-align: center;
+	font-size: 19px;
+}
+
+}  
+
+/** terms **/
+
+.terms{
+    line-height: 2;
+    margin: auto;
+    width: 80%;
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    color: #1f2125;
+}
+
+/** faq **/
+
+.section_padding_130 {
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
+
+.faq_area {
+    position: relative;
+    z-index: 1;
+    background-color: #f5f5ff;
+}
+
+.faq-accordian {
+    position: relative;
+    z-index: 1;
+}
+.faq-accordian .card {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 1.5rem;
+}
+.faq-accordian .card:last-child {
+    margin-bottom: 0;
+}
+.faq-accordian .card .card-header {
+    background-color: #ffffff;
+    padding: 0;
+    border-bottom-color: #ebebeb;
+}
+.faq-accordian .card .card-header h6 {
+    cursor: pointer;
+    padding: 1.75rem 2rem;
+    color: #3f43fd;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.faq-accordian .card .card-header h6 span {
+    font-size: 1.5rem;
+}
+.faq-accordian .card .card-header h6.collapsed {
+    color: #070a57;
+}
+.faq-accordian .card .card-header h6.collapsed span {
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}
+.faq-accordian .card .card-body {
+    padding: 1.75rem 2rem;
+}
+.faq-accordian .card .card-body p:last-child {
+    margin-bottom: 0;
+}
+
+@media only screen and (max-width: 575px) {
+    .support-button p {
+        font-size: 14px;
+    }
+}
+
+.support-button i {
+    color: #3f43fd;
+    font-size: 1.25rem;
+}
+@media only screen and (max-width: 575px) {
+    .support-button i {
+        font-size: 1rem;
+    }
+}
+
+.support-button a {
+    text-transform: capitalize;
+    color: #2ecc71;
+}
+@media only screen and (max-width: 575px) {
+    .support-button a {
+        font-size: 13px;
+    }
 }

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block content %}
+
+<div class="Asection">
+    <div class="Acontainer">
+        <div class="content-section">
+            <div class="title">
+                <h1>About Us</h1>
+            </div>
+            <div class="content">
+    
+                <p>{{about.about_text | safe}}
+               
+            </div>
+        </div>
+        <div class="image-section">
+            <img src="{% static 'img/tpic.jpg'%}">
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

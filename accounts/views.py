@@ -29,10 +29,10 @@ def login_user(request):
 
         user=authenticate(request, username=username,password=password)
         
-        if  not user.is_email_verified:
-            messages.add_message(request,messages.ERROR,
-                                                    'Email is not verified, verify it to login')
-            return redirect('login')                                       
+        # if  not user.is_email_verified:
+        #     messages.add_message(request,messages.ERROR,
+        #                                             'Email is not verified, verify it to login')
+        #     return redirect('login')                                       
             
         if not user:
             messages.add_message(request,messages.ERROR,
@@ -40,8 +40,8 @@ def login_user(request):
             return redirect('login')                                       
             
         login(request,user)
-        messages.add_message(request,messages.SUCCESS,
-                                                    'Logged in successfully')
+        # messages.add_message(request,messages.SUCCESS,
+        #                                             'Logged in successfully') 
 
         return redirect('home')                                            
         
